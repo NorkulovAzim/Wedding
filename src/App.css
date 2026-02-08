@@ -35,7 +35,7 @@ body {
 }
 
 .nav-list a {
-  color: #000;
+  color: black;
   text-decoration: none;
 }
 
@@ -51,7 +51,52 @@ body {
 }
 
 header {
-  background-color: #fff;
-  padding: 10px 20px;
+  background-color: #f4f4f4;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-animation {
+  width: 30px;
+  height: 30px;
+}
+
+.floating-animation {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fallDown 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fallDown {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+.a1 {
+  animation-delay: 0s;
+}
+.a2 {
+  animation-delay: 2s;
+  left: 30%;
+}
+.a3 {
+  animation-delay: 4s;
+  left: 70%;
 }
